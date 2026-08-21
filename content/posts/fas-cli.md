@@ -6,10 +6,8 @@ summary: "Benchmarking azd against Azure AI Foundry, and why agent definitions d
 showToc: true
 ---
 
-I've spent a good amount of time around Azure's development tooling, and lately
-I've been curious about the developer experience of deploying AI agents on Azure
-AI Foundry. Everything in this post is a personal side project: my own Azure
-subscription, the public Foundry APIs and documentation, and open-source tooling.
+I've spent now a good amount of time around Azure's development tooling, and therefore have some opinions about the whole developer experience of deploying AI agents on Azure
+AI Foundry. 
 
 Azure provides the [Azure Developer CLI (`azd`)](https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/), and according to Microsoft it
 **should** accelerate your path from a local development environment to Azure. 
