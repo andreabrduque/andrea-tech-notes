@@ -1,7 +1,9 @@
 ---
-layout: post
 title: "How have you been deploying AI agents in the cloud?"
-date: 2026-08-14 00:00:00 +0000
+date: 2026-08-14T00:00:00+00:00
+tags: ["azure", "agents", "infrastructure", "tooling"]
+summary: "Benchmarking azd against Azure AI Foundry, and why agent definitions deserve a lighter deployment path than long-lived cloud infrastructure."
+showToc: true
 ---
 
 At work I've been using Azure AI Foundry to deploy AI agents, so I've now spent
