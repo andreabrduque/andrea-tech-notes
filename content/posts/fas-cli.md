@@ -4,6 +4,8 @@ date: 2026-08-14T00:00:00+00:00
 tags: ["azure", "agents", "infrastructure", "tooling"]
 summary: "Benchmarking azd against Azure AI Foundry, and why agent definitions deserve a lighter deployment path than long-lived cloud infrastructure."
 showToc: true
+aliases:
+  - /2026/08/14/fas-cli/
 ---
 
 I've spent now a good amount of time around Azure's development tooling, and therefore have some opinions about the whole developer experience of deploying AI agents on Azure
