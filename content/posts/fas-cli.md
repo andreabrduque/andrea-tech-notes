@@ -6,8 +6,10 @@ summary: "Benchmarking azd against Azure AI Foundry, and why agent definitions d
 showToc: true
 ---
 
-At work I've been using Azure AI Foundry to deploy AI agents, so I've now spent
-a good amount of time around Azure's development tooling.
+I've spent a good amount of time around Azure's development tooling, and lately
+I've been curious about the developer experience of deploying AI agents on Azure
+AI Foundry. Everything in this post is a personal side project: my own Azure
+subscription, the public Foundry APIs and documentation, and open-source tooling.
 
 Azure provides the [Azure Developer CLI (`azd`)](https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/), and according to Microsoft it
 **should** accelerate your path from a local development environment to Azure. 
@@ -127,7 +129,7 @@ If your team is deploying agents through IaC tooling today, I'd be curious where
 
 ## Appendix: why include the model deployment at all?
 
-A colleague asked me a fair question about my experiment: why put the model deployment in it? The agent isn't an ARM resource, it's created through the Foundry data-plane APIs. And architecturally, an agent definition doesn't need to know anything about the model at all: it can reference an endpoint, and whatever sits behind that endpoint is the platform's concern. 
+A fair question about this experiment is why put the model deployment in it at all. The agent isn't an ARM resource, it's created through the Foundry data-plane APIs. And architecturally, an agent definition doesn't need to know anything about the model at all: it can reference an endpoint, and whatever sits behind that endpoint is the platform's concern. 
 
 This doesn't change the fact that a deployed agent that can actually answer a request still has to resolve to a specific model, and that choice can make or break the agent's behavior. Run the same prompt and tools against a different model, or against a silently updated version behind the same endpoint, and you have a different agent and different eval results. So once the model deployment is abstracted as an endpoint, either that endpoint pins a model version, in which case the agent does know the model after all, just at one level of abstraction higher, or it doesn't, and your evals stop being reproducible.
 In an organization where a platform team runs models as shared, governed endpoints, the model genuinely is infrastructure, and only the prompt, tools, and endpoint reference change fast. But while I'm iterating on an agent, I still should own the model choice from a behavior perspective: I might pin a version so an eval stays reproducible, try a smaller model for speed, or test latest model releases. I won't change the model as often as I touch the prompt, but often enough that, for me, it belongs to my application development loop.
