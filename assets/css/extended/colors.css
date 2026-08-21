@@ -1,0 +1,55 @@
+/* Warm palette overriding PaperMod's default greys */
+:root {
+    --theme: #faf6ef;        /* warm cream page background */
+    --entry: #fffdf8;        /* post cards */
+    --primary: #2b2520;      /* headings, strong text */
+    --secondary: #7a6a5c;    /* meta text */
+    --tertiary: #e6dccd;     /* subtle UI */
+    --content: #3b332c;      /* body text */
+    --code-bg: #f3ece0;
+    --border: #e9e0d1;
+    --accent: #c2553d;       /* terracotta links */
+}
+
+.dark {
+    --theme: #1f1b18;
+    --entry: #2a2522;
+    --primary: #ede5d8;
+    --secondary: #a89a89;
+    --tertiary: #46403a;
+    --content: #d6ccbd;
+    --code-bg: #332d28;
+    --border: #3d3630;
+    --accent: #e38a6d;
+}
+
+/* Accent links inside content and on the home card */
+.post-content a,
+.home-info .entry-content a,
+.post-entry:hover .entry-header h2,
+.first-entry:hover .entry-header h1 {
+    color: var(--accent);
+    box-shadow: none;
+}
+
+.post-content a {
+    box-shadow: 0 1px 0 var(--accent);
+}
+
+.post-entry {
+    border: 1px solid var(--border);
+    box-shadow: 0 1px 3px rgba(60, 40, 20, 0.06);
+}
+
+.post-entry:active {
+    transform: scale(0.98);
+}
+
+.toc {
+    border: 1px solid var(--border);
+    background: var(--code-bg);
+}
+
+blockquote {
+    border-inline-start: 3px solid var(--accent);
+}

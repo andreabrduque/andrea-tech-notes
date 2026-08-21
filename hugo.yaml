@@ -53,6 +53,12 @@ params:
       Hi, I'm Andréa. I write about applied AI, ML, agents and the cloud —
       mostly things I'm learning while building them.
 
+
+      *Opinions here are my own and do not represent those of my employer.*
+
+  footer:
+    text: "Opinions are my own and not those of my employer"
+
   socialIcons:
     - name: github
       url: "https://github.com/andreabrduque"
