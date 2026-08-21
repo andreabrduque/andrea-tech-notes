@@ -48,10 +48,9 @@ params:
   math: true
 
   homeInfoParams:
-    Title: "👋 Welcome to Andréa's Notes"
+    Title: "👋 Welcome"
     Content: >
-      Hi, I'm Andréa. I write about applied AI, ML, agents and the cloud —
-      mostly things I'm learning while building them.
+      Hi, I'm Andréa. I write about applied AI, ML, agents and the cloud.
 
 
       *Opinions here are my own and do not represent those of my employer.*
