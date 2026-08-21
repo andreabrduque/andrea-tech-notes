@@ -1,26 +1,26 @@
-/* Warm palette overriding PaperMod's default greys */
+/* Soft pink palette overriding PaperMod's default greys */
 :root {
-    --theme: #faf6ef;        /* warm cream page background */
-    --entry: #fffdf8;        /* post cards */
-    --primary: #2b2520;      /* headings, strong text */
-    --secondary: #7a6a5c;    /* meta text */
-    --tertiary: #e6dccd;     /* subtle UI */
-    --content: #3b332c;      /* body text */
-    --code-bg: #f3ece0;
-    --border: #e9e0d1;
-    --accent: #c2553d;       /* terracotta links */
+    --theme: #fdf2f5;        /* blush page background */
+    --entry: #fffafb;        /* post cards */
+    --primary: #3a2530;      /* headings, strong text */
+    --secondary: #8a6878;    /* meta text */
+    --tertiary: #f1dbe3;     /* subtle UI */
+    --content: #4a3340;      /* body text */
+    --code-bg: #f8e6ec;
+    --border: #f0d6de;
+    --accent: #d6457a;       /* rose links */
 }
 
 .dark {
-    --theme: #1f1b18;
-    --entry: #2a2522;
-    --primary: #ede5d8;
-    --secondary: #a89a89;
-    --tertiary: #46403a;
-    --content: #d6ccbd;
-    --code-bg: #332d28;
-    --border: #3d3630;
-    --accent: #e38a6d;
+    --theme: #221820;        /* deep plum */
+    --entry: #2e212a;
+    --primary: #f5e4ea;
+    --secondary: #b596a4;
+    --tertiary: #4a3842;
+    --content: #e2cdd6;
+    --code-bg: #3a2a33;
+    --border: #44323c;
+    --accent: #f08cb3;       /* soft pink links */
 }
 
 /* Accent links inside content and on the home card */
@@ -38,7 +38,7 @@
 
 .post-entry {
     border: 1px solid var(--border);
-    box-shadow: 0 1px 3px rgba(60, 40, 20, 0.06);
+    box-shadow: 0 1px 3px rgba(120, 40, 80, 0.06);
 }
 
 .post-entry:active {
